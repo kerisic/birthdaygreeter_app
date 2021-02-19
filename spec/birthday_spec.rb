@@ -10,7 +10,7 @@ describe Birthday do
     it 'if birthday is today it returns true' do
       day = Date.today.strftime('%d')
       month = Date.today.strftime('%m')
-      year = Date.today.strftime('Y')
+      year = Date.today.strftime('%Y')
       subject = Birthday.new(day.to_s, month.to_s, year.to_s)
       expect(subject.is_today?).to eq true
     end

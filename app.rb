@@ -1,5 +1,4 @@
 require 'sinatra/base'
-require 'shotgun'
 require './lib/birthday'
 
 class Greeter < Sinatra::Base
@@ -13,12 +12,7 @@ class Greeter < Sinatra::Base
     @name = params[:name]
     session[:name] = @name
     $birthday = Birthday.new(params[:day], params[:Month], params[:year])
-    p $birthday
-    if $birthday.is_today?
-      redirect '/birthday'
-    else
-      redirect '/when'
-    end
+    $birthday.is_today? ? (redirect '/birthday') : (redirect '/when')
   end
 
   get '/birthday' do
@@ -27,6 +21,7 @@ class Greeter < Sinatra::Base
   end
 
   get '/when' do
+    @days = $birthday.days_left
     erb :nope
   end
 

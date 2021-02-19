@@ -1,4 +1,5 @@
 require 'Date'
+require_relative 'countdown'
 
 class Birthday
   def initialize(day, month, year)
@@ -11,9 +12,11 @@ class Birthday
     convert == Date.today.strftime('%d %m')
   end
 
-  private
-
   def convert
     Date.parse("#{@day} #{@month}").strftime('%d %m')
+  end
+
+  def days_left
+    (Countdown.new(@day, @month)).days_left
   end
 end
