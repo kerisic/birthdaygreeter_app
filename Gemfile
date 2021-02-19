@@ -2,10 +2,11 @@
 
 source 'https://rubygems.org'
 
+gem 'bundler'
 gem 'capybara'
 gem 'rspec'
 gem 'shotgun'
-gem 'sinatra'
+gem 'sinatra', :require => nil
 gem 'rack'
 gem 'puma'
 # gem "rails"
