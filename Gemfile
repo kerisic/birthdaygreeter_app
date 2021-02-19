@@ -8,6 +8,4 @@ gem 'shotgun'
 gem 'sinatra'
 gem 'rack'
 gem 'puma'
-gem 'thin'
-gem 'foreman'
 # gem "rails"
