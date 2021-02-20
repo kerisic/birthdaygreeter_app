@@ -10,3 +10,5 @@ gem 'sinatra', :require => nil
 gem 'rack'
 gem 'puma'
 # gem "rails"
+
+ruby "3.0.0"
