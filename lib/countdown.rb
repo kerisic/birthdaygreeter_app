@@ -1,4 +1,4 @@
-require 'Date'
+require 'date'
 
 class Countdown
   def initialize(day, month)
